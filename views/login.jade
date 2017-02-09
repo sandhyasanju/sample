@@ -1,0 +1,22 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to #{title} Click to Join into our New World.
+   div.actions
+      //- input(type="submit", value="SIGN UP",action="http://127.0.0.1.3000/login")
+      a(type="button",href="/") SIGN UP
+  form(name="newForm", method="POST", action="http://127.0.0.1:3000/dashboard")
+    //- div.input
+    //-   span.label Full Name
+    //-   input(type="text", name="fullName")
+    div.input
+      span.label Email
+      input(type="email", name="email")
+    div.input
+      span.label Password
+      input(type="password", name="password")
+    div.actions
+      input(type="submit", value="LOGIN")
+    //- div.actions
+    //-     input(type="submit", value="SIGN UP)

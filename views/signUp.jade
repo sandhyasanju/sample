@@ -1,0 +1,27 @@
+//- extends _bootstrap
+extends layout
+
+block content
+  h1= title
+  p Welcome to #{title} Click to Join into our New World.
+  div.col-md-6
+    div.actions
+      //- input(type="submit", value="SIGN UP",action="http://127.0.0.1.3000/login")
+      a(href="/login") LOGIN
+  form(name="newForm", method="POST", action="http://127.0.0.1:3000/details")
+    div.col-md-6
+      div.input-group
+        //- span.label Full Name
+        input(type="text", name="fullName", class="input form-control",placeholder="Full Name")
+    div.col-md-6
+      div.input-group
+         //- span.label Email
+        input(type="email", name="email", class="input form-control",placeholder="Email")
+    div.col-md-6
+      div.input-group
+        //- span.label Password
+        input(type="password", name="password",class="input form-control",placeholder="Password")
+    div.col-md-6
+      div.actions
+        input(type="submit", value="SIGN UP")
+
